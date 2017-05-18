@@ -19,24 +19,23 @@ public class InvalidDateOfDeath implements RuleDefinition<Patient> {
 	public List<RuleResult<Patient>> evaluate() {
 		SessionFactory sessionFactory = Context.getRegisteredComponent("sessionFactory", SessionFactory.class);
 		
-		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Patient.class, "patient")
+		/*Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Patient.class, "patient")
 		        .add(Restrictions.isNotNull("deathDate")).add(Restrictions.eq("voided", false))
 		        .add(Restrictions.gt("deathDate", new Date()));
-		
-		List<Patient> patientList = criteria.list();
+		*/
+		//List<Patient> patientList = criteria.list();
+		List<Patient> patientList = new ArrayList<>();
 		
 		return patientToRuleResultTransformer(patientList);
 	}
 	
-	private List<RuleResult<Patient>> patientToRuleResultTransformer(List<Patient> patients){
-
+	private List<RuleResult<Patient>> patientToRuleResultTransformer(List<Patient> patients) {
         List<RuleResult<Patient>> ruleResults = new ArrayList<>();
         for (Patient patient : patients) {
             RuleResult<Patient> ruleResult = new RuleResult<>();
             ruleResult.setActionUrl("");
             ruleResult.setNotes("Patient with invalid date");
             ruleResult.setEntity(patient);
-
             ruleResults.add(ruleResult);
         }
 
