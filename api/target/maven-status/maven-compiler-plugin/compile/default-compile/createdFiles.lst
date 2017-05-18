@@ -1,0 +1,7 @@
+org/openmrs/module/ruleshost/api/impl/RuleshostServiceImpl.class
+org/openmrs/module/ruleshost/Item.class
+org/openmrs/module/ruleshost/RuleshostConfig.class
+org/openmrs/module/ruleshost/api/dao/RuleshostDao.class
+org/openmrs/module/ruleshost/dataintegrity/InvalidDateOfDeath.class
+org/openmrs/module/ruleshost/api/RuleshostService.class
+org/openmrs/module/ruleshost/RuleshostActivator.class

@@ -1,0 +1,7 @@
+/home/shivang/ruleshost/api/src/main/java/org/openmrs/module/ruleshost/Item.java
+/home/shivang/ruleshost/api/src/main/java/org/openmrs/module/ruleshost/RuleshostConfig.java
+/home/shivang/ruleshost/api/src/main/java/org/openmrs/module/ruleshost/api/dao/RuleshostDao.java
+/home/shivang/ruleshost/api/src/main/java/org/openmrs/module/ruleshost/api/impl/RuleshostServiceImpl.java
+/home/shivang/ruleshost/api/src/main/java/org/openmrs/module/ruleshost/dataintegrity/InvalidDateOfDeath.java
+/home/shivang/ruleshost/api/src/main/java/org/openmrs/module/ruleshost/api/RuleshostService.java
+/home/shivang/ruleshost/api/src/main/java/org/openmrs/module/ruleshost/RuleshostActivator.java

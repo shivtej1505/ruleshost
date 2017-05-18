@@ -1,0 +1,3 @@
+org/openmrs/module/ruleshost/web/controller/RuleshostController.class
+org/openmrs/module/ruleshost/extension/html/AdminList.class
+org/openmrs/module/ruleshost/fragment/controller/UsersFragmentController.class
