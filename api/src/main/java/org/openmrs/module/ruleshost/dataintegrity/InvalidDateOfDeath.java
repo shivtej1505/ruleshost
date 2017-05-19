@@ -2,24 +2,25 @@ package org.openmrs.module.ruleshost.dataintegrity;
 
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
+import org.hibernate.classic.Session;
 import org.hibernate.criterion.Restrictions;
 import org.openmrs.Patient;
-import org.openmrs.api.context.Context;
+import org.openmrs.module.dataintegrity.DataIntegrityRule;
 import org.openmrs.module.dataintegrity.rule.RuleDefinition;
 import org.openmrs.module.dataintegrity.rule.RuleResult;
-import org.openmrs.module.dataintegrity.DataIntegrityRule;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class InvalidDateOfDeath implements RuleDefinition<Patient> {
-	
+    private SessionFactory sessionFactory;
+
 	@Override
 	public List<RuleResult<Patient>> evaluate() {
-		SessionFactory sessionFactory = Context.getRegisteredComponent("sessionFactory", SessionFactory.class);
-		
-		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Patient.class, "patient");
+		//SessionFactory sessionFactory = Context.getRegisteredComponent("sessionFactory", SessionFactory.class);
+		Session session = sessionFactory.getCurrentSession();
+        Criteria criteria = session.createCriteria(Patient.class, "patient");
 
         criteria.add(Restrictions.isNotNull("deathDate"));
         criteria.add(Restrictions.eq("voided", false));
@@ -48,4 +49,8 @@ public class InvalidDateOfDeath implements RuleDefinition<Patient> {
 	public DataIntegrityRule getRule() {
 		return null;
 	}
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 }
