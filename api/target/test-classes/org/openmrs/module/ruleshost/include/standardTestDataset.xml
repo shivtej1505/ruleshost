@@ -1,21 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dataset>
-<!--
-
-    &lt;!&ndash; Encounter Types &ndash;&gt;
-    <encounter_type encounter_type_id="1" name="ART Card - Summary" description="Outpatient Adult Initial Visit" creator="1" date_created="2016-04-05 16:43:19.0" retired="false" uuid="8d5b27bc-c2cc-11de-8d13-0010c6dffd0f"/>
-    <encounter_type encounter_type_id="2" name="ART Card - Encounter" description="Outpatient Adult &amp; Child Return Visit" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="8d5b2be0-c2cc-11de-8d13-0010c6dffd0f"/>
-    <encounter_type encounter_type_id="10" name="LAB Encounter" description="Lab Encounter" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="214e27a1-606a-4b1e-a96e-d736c87069d5"/>
-    <encounter_type encounter_type_id="11" name="ART Card - Health Education Encounter" description="An Health education encounter created when a patient gets health education" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="6d88e370-f2ba-476b-bf1b-d8eaf3b1b67e"/>
-    <encounter_type encounter_type_id="19" name="EID Card - Summary" description="Outpatient Children Initial Visit" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="9fcfcc91-ad60-4d84-9710-11cc25258719"/>
-    <encounter_type encounter_type_id="20" name="EID Card - Encounter" description="Outpatient Child Return Visit" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="4345dacb-909d-429c-99aa-045f2db77e2b"/>
-    <encounter_type encounter_type_id="21" name="SMC - Encounter" description="An encounter when a patient gets SMC services" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="244da86d-f80e-48fe-aba9-067f241905ee"/>
-    <encounter_type encounter_type_id="22" name="ANC - Encounter" description="An encounter when a patient gets ANC services" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="044daI6d-f80e-48fe-aba9-037f241905Pe"/>
-    <encounter_type encounter_type_id="23" name="Maternity - Encounter" description="When a mother comes to a health facility to deliver" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="a9f11592-22e7-45fc-904d-dfe24cb1fc67"/>
-    <encounter_type encounter_type_id="24" name="HTC - Encounter" description="An encounter when a patient gets HCT services" creator="1" date_created="2016-04-05 16:43:20.0" retired="false" uuid="264daIZd-f80e-48fe-nba9-P37f2W1905Pv"/>
-    <encounter_type encounter_type_id="25" name="PNC - Encounter" description="An encounter when a patient gets PNC services" creator="1" date_created="2016-12-07 14:45:59.0" retired="false" uuid="fa6f3ff5-b784-43fb-ab35-a08ab7dbf074"/>
--->
-
     <!-- Patient Identifiers -->
     <patient_identifier_type  check_digit="0" patient_identifier_type_id="4" name="HIV Clinic No." description="This is the patient's identifier used at the treating facility" creator="1" date_created="2017-01-31 10:59:34.0" required="false" format_description="The first three letters of the facility, followed by / then 5 numbers with no spaces" retired="false" uuid="e1731641-30ab-102d-86b0-7a5022ba4115" location_behavior="NOT_USED"/>
     <patient_identifier_type  check_digit="0" patient_identifier_type_id="8" name="Exposed Infant No." description="This is the exposed infant clinic number used at the treating facility" creator="1" date_created="2017-01-31 10:59:35.0" required="false" format_description="Birth Cohort number" retired="false" uuid="2c5b695d-4bf3-452f-8a7c-fe3ee3432ffe" location_behavior="NOT_USED"/>

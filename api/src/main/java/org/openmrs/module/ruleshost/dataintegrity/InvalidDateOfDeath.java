@@ -14,19 +14,19 @@ import java.util.Date;
 import java.util.List;
 
 public class InvalidDateOfDeath implements RuleDefinition<Patient> {
-    private SessionFactory sessionFactory;
-
+	
+	private SessionFactory sessionFactory;
+	
 	@Override
 	public List<RuleResult<Patient>> evaluate() {
 		//SessionFactory sessionFactory = Context.getRegisteredComponent("sessionFactory", SessionFactory.class);
 		Session session = sessionFactory.getCurrentSession();
-        Criteria criteria = session.createCriteria(Patient.class, "patient");
-
-        criteria.add(Restrictions.isNotNull("deathDate"));
-        criteria.add(Restrictions.eq("voided", false));
-        criteria.add(Restrictions.gt("deathDate", new Date()));
-
-
+		Criteria criteria = session.createCriteria(Patient.class, "patient");
+		
+		criteria.add(Restrictions.isNotNull("deathDate"));
+		criteria.add(Restrictions.eq("voided", false));
+		criteria.add(Restrictions.gt("deathDate", new Date()));
+		
 		List<Patient> patientList = criteria.list();
 		//List<Patient> patientList = new ArrayList<>();
 		
@@ -47,10 +47,16 @@ public class InvalidDateOfDeath implements RuleDefinition<Patient> {
     }
 	
 	public DataIntegrityRule getRule() {
-		return null;
+		DataIntegrityRule rule = new DataIntegrityRule();
+		rule.setRuleCategory("patient");
+		rule.setHandlerConfig("java");
+		rule.setHandlerClassname(getClass().getName());
+		rule.setRuleName("Invalid Date of Death");
+		rule.setUuid("e0e6cb8d-8492-4bed-bf3f-08a3ecf3bedb");
+		return rule;
 	}
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+	
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
 }
