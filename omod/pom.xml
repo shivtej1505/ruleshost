@@ -5,6 +5,7 @@
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>ruleshost</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<artifactId>ruleshost-omod</artifactId>
