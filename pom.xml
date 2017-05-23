@@ -28,6 +28,11 @@
 		<module>omod</module>
 	</modules>
 
+	<properties>
+		<openmrsPlatformVersion>1.11.6</openmrsPlatformVersion>
+		<dataintegrityVersion>4.2.3</dataintegrityVersion>
+	</properties>
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- Importing versions from refapp distro -->
@@ -41,7 +46,8 @@
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
 				<artifactId>dataintegrity-api</artifactId>
-				<version>4.3.1-SNAPSHOT</version>
+				<version>${dataintegrityVersion}</version>
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.openmrs.test</groupId>
@@ -86,10 +92,6 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
-	<properties>
-		<openmrsPlatformVersion>1.11.6</openmrsPlatformVersion>
-	</properties>
 
 	<build>
 		<plugins>
